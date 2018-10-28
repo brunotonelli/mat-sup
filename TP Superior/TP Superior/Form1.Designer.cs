@@ -27,16 +27,16 @@
         /// </summary>
         private void InitializeComponent() {
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.matrizA = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.matrizB = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.matrizX = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cotaErrorTextBox = new System.Windows.Forms.TextBox();
@@ -44,9 +44,9 @@
             this.decimalesTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dominanteLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizX)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -59,23 +59,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // matrizA
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(367, 352);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            this.matrizA.AllowUserToAddRows = false;
+            this.matrizA.AllowUserToDeleteRows = false;
+            this.matrizA.AllowUserToOrderColumns = true;
+            this.matrizA.AllowUserToResizeColumns = false;
+            this.matrizA.AllowUserToResizeRows = false;
+            this.matrizA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.matrizA.ColumnHeadersVisible = false;
+            this.matrizA.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.matrizA.Location = new System.Drawing.Point(12, 48);
+            this.matrizA.Name = "matrizA";
+            this.matrizA.RowHeadersVisible = false;
+            this.matrizA.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.matrizA.Size = new System.Drawing.Size(367, 352);
+            this.matrizA.TabIndex = 1;
+            this.matrizA.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
             // label1
             // 
@@ -95,22 +95,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Matriz B";
             // 
-            // dataGridView2
+            // matrizB
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AllowUserToResizeColumns = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.ColumnHeadersVisible = false;
-            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView2.Location = new System.Drawing.Point(385, 48);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView2.Size = new System.Drawing.Size(124, 352);
-            this.dataGridView2.TabIndex = 1;
+            this.matrizB.AllowUserToAddRows = false;
+            this.matrizB.AllowUserToDeleteRows = false;
+            this.matrizB.AllowUserToOrderColumns = true;
+            this.matrizB.AllowUserToResizeColumns = false;
+            this.matrizB.AllowUserToResizeRows = false;
+            this.matrizB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.matrizB.ColumnHeadersVisible = false;
+            this.matrizB.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.matrizB.Location = new System.Drawing.Point(385, 48);
+            this.matrizB.Name = "matrizB";
+            this.matrizB.RowHeadersVisible = false;
+            this.matrizB.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.matrizB.Size = new System.Drawing.Size(124, 352);
+            this.matrizB.TabIndex = 1;
             // 
             // button2
             // 
@@ -120,7 +120,6 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Validar Sistema";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -161,22 +160,22 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Resultado";
             // 
-            // dataGridView3
+            // matrizX
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToOrderColumns = true;
-            this.dataGridView3.AllowUserToResizeColumns = false;
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.ColumnHeadersVisible = false;
-            this.dataGridView3.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView3.Location = new System.Drawing.Point(12, 440);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView3.Size = new System.Drawing.Size(367, 46);
-            this.dataGridView3.TabIndex = 10;
+            this.matrizX.AllowUserToAddRows = false;
+            this.matrizX.AllowUserToDeleteRows = false;
+            this.matrizX.AllowUserToOrderColumns = true;
+            this.matrizX.AllowUserToResizeColumns = false;
+            this.matrizX.AllowUserToResizeRows = false;
+            this.matrizX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.matrizX.ColumnHeadersVisible = false;
+            this.matrizX.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.matrizX.Location = new System.Drawing.Point(12, 440);
+            this.matrizX.Name = "matrizX";
+            this.matrizX.RowHeadersVisible = false;
+            this.matrizX.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.matrizX.Size = new System.Drawing.Size(367, 46);
+            this.matrizX.TabIndex = 10;
             // 
             // label5
             // 
@@ -202,7 +201,7 @@
             this.cotaErrorTextBox.Name = "cotaErrorTextBox";
             this.cotaErrorTextBox.Size = new System.Drawing.Size(124, 20);
             this.cotaErrorTextBox.TabIndex = 14;
-            this.cotaErrorTextBox.Text = "0.1";
+            this.cotaErrorTextBox.Text = "0,1";
             // 
             // label7
             // 
@@ -253,22 +252,22 @@
             this.Controls.Add(this.cotaErrorTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.matrizX);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.matrizB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.matrizA);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,16 +276,16 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView matrizA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView matrizB;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView matrizX;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox cotaErrorTextBox;
