@@ -30,9 +30,9 @@ namespace TP_Superior
             {
                 double sumaFila = 0;
                 for (int j = 0; j < n; j++)
-                    sumaFila += Math.Abs(aux[i, j].Re);
-                sumaFila -= Math.Abs(aux[i, i].Re);
-                if (Math.Abs(aux[i, i].Re) < sumaFila)
+                    sumaFila += Math.Abs(aux[i+1, j+1].Re);
+                sumaFila -= Math.Abs(aux[i+1, i+1].Re);
+                if (Math.Abs(aux[i+1, i+1].Re) < sumaFila)
                     return false;
             }
             return true;
@@ -50,6 +50,10 @@ namespace TP_Superior
 
         public static Matrix Negativa(this Matrix m) {
             return m * -1;
+        }
+
+        public static bool Invertible(this Matrix m) {
+            return m.Determinant() != 0;
         }
         
     }

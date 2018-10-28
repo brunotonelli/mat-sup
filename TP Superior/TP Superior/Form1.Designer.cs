@@ -43,6 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.decimalesTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.dominanteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -74,6 +75,7 @@
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.Size = new System.Drawing.Size(367, 352);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
             // label1
             // 
@@ -112,7 +114,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(552, 218);
+            this.button2.Location = new System.Drawing.Point(646, 376);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 45);
             this.button2.TabIndex = 4;
@@ -200,6 +202,7 @@
             this.cotaErrorTextBox.Name = "cotaErrorTextBox";
             this.cotaErrorTextBox.Size = new System.Drawing.Size(124, 20);
             this.cotaErrorTextBox.TabIndex = 14;
+            this.cotaErrorTextBox.Text = "0.1";
             // 
             // label7
             // 
@@ -216,6 +219,7 @@
             this.decimalesTextBox.Name = "decimalesTextBox";
             this.decimalesTextBox.Size = new System.Drawing.Size(124, 20);
             this.decimalesTextBox.TabIndex = 16;
+            this.decimalesTextBox.Text = "7";
             // 
             // label8
             // 
@@ -226,11 +230,23 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Decimales";
             // 
+            // dominanteLabel
+            // 
+            this.dominanteLabel.AutoSize = true;
+            this.dominanteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dominanteLabel.ForeColor = System.Drawing.Color.Red;
+            this.dominanteLabel.Location = new System.Drawing.Point(515, 186);
+            this.dominanteLabel.Name = "dominanteLabel";
+            this.dominanteLabel.Size = new System.Drawing.Size(217, 20);
+            this.dominanteLabel.TabIndex = 18;
+            this.dominanteLabel.Text = "No diagonalmente dominante";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 498);
+            this.Controls.Add(this.dominanteLabel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.decimalesTextBox);
             this.Controls.Add(this.label7);
@@ -277,6 +293,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox decimalesTextBox;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label dominanteLabel;
     }
 }
 

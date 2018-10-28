@@ -111,6 +111,7 @@ namespace TP_Superior
 
         private void button4_Click(object sender, EventArgs e) {
             Matrix a = new Matrix(generarMatrizCoeficientes());
+            ValidarMatriz(a);
             Matrix b = new Matrix(generarMatrizTerminosIndependientes());
             Matrix x = new Matrix(generarVectorInicial());
             int decimales = Int32.Parse(decimalesTextBox.Text);
@@ -124,6 +125,7 @@ namespace TP_Superior
 
         private void button3_Click(object sender, EventArgs e) {
             Matrix a = new Matrix(generarMatrizCoeficientes());
+            ValidarMatriz(a);
             Matrix b = new Matrix(generarMatrizTerminosIndependientes());
             Matrix x = new Matrix(generarVectorInicial());
             int decimales = Int32.Parse(decimalesTextBox.Text);
@@ -133,6 +135,27 @@ namespace TP_Superior
             string resultado = g.X.ToString();
             label3.Text = resultado;
             label6.Text = g.Iteraciones + " iteraciones";
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e) {
+            Matrix a = new Matrix(generarMatrizCoeficientes());
+            if (a.DiagonalmenteDominante())
+            {                
+                dominanteLabel.ForeColor = Color.ForestGreen;
+                dominanteLabel.Text = "Diagonalmente dominante";
+            }
+            else
+            {
+                dominanteLabel.ForeColor = Color.Red;
+                dominanteLabel.Text = "No diagonalmente dominante";
+            }
+        }
+
+        private void ValidarMatriz(Matrix a) {
+            if (!a.Invertible())
+            {
+                throw new Exception("La matriz A no es invertible");
+            }
         }
     }
 }
