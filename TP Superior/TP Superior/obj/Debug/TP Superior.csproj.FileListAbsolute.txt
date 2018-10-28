@@ -1,0 +1,10 @@
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\bin\Debug\TP Superior.exe.config
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\bin\Debug\TP Superior.exe
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\bin\Debug\TP Superior.pdb
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\obj\Debug\TP Superior.csprojAssemblyReference.cache
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\obj\Debug\TP_Superior.Form1.resources
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\obj\Debug\TP_Superior.Properties.Resources.resources
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\obj\Debug\TP Superior.csproj.GenerateResource.cache
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\obj\Debug\TP Superior.csproj.CoreCompileInputs.cache
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\obj\Debug\TP Superior.exe
+C:\Users\BRUNO\Desktop\TP Superior\TP Superior\obj\Debug\TP Superior.pdb
