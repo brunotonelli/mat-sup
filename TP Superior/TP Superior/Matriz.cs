@@ -11,11 +11,16 @@ namespace TP_Superior
     {
         public static Matrix Diagonal(this Matrix m) {
             int n = m.ColumnCount;
-            Matrix d = new Matrix(n);
             Matrix aux = m.Clone();
-            for (int i = 0; i < n; i++)
-                d[i, i] = aux[i, i];
-            return d;
+            for (int i = 1; i <= n; i++) //indice desde 1
+            {
+                for (int j = 1; j <= n; j++)
+                {
+                    if (i != j)
+                        aux[i, j] = Complex.Zero;
+                }
+            }
+            return aux;
         }
         
         public static bool DiagonalmenteDominante(this Matrix m) {
@@ -46,6 +51,6 @@ namespace TP_Superior
         public static Matrix Negativa(this Matrix m) {
             return m * -1;
         }
-
+        
     }
 }

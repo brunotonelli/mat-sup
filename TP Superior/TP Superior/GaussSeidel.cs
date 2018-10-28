@@ -13,8 +13,8 @@ namespace TP_Superior
             : base(a, b, vectorInicial, decimales, cotaError) { }
         
         public override void GenerarTC() {
-            T = (D - L).Inverse() * U;
-            C = (D - L).Inverse() * B;
+            T = (D.Clone() - L.Clone()).Inverse() * U;
+            C = (D.Clone() - L.Clone()).Inverse() * B;
         }
     }
 }

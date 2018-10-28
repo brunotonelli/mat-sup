@@ -24,15 +24,23 @@ namespace TP_Superior
 
         public int Decimales;
         public double CotaError;
+        public int Iteraciones = 0;
 
         public MetodoIterativo(Matrix a, Matrix b, Matrix vectorInicial, int decimales, double cotaError) {
             A = a;
             B = b;
             X = vectorInicial;
+            XAnterior = Vacia();
             Decimales = decimales;
             CotaError = cotaError;
             GenerarDLU();
             GenerarTC();
+        }
+    
+        private Matrix Vacia() {
+            int n = A.ColumnCount;
+            double[] vector = new double[n];
+            return new Matrix(vector);
         }
 
         private void GenerarDLU() {
@@ -49,13 +57,15 @@ namespace TP_Superior
         }
 
         private bool Parar() {
-            double norma = (X - XAnterior).MaxNorm(); //norma infinito
-            return norma <= CotaError;
+            Matrix aux = X.Clone() - XAnterior.Clone();
+            double norma = aux.MaxNorm(); //norma inf
+            return norma < CotaError && norma != 0;
         }
 
         public void Iterar() {
             XAnterior = X;
             X = T * XAnterior + C;
+            Iteraciones++;
         }
 
     }
