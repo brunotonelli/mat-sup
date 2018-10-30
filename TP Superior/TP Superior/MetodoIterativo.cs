@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP_Superior
 {
-    public abstract class MetodoIterativo
+    public class MetodoIterativo
     {
         private Matrix A; //matriz de coeficientes
         protected Matrix B; //matriz de terminos independientes
@@ -19,21 +19,32 @@ namespace TP_Superior
         protected Matrix T;
         protected Matrix C;
 
+        public Matrix XInicial;
         public Matrix XAnterior;
-        public Matrix X;        
+        public Matrix X;
 
+        public int N;
         public int Decimales;
         public double CotaError;
         public int Iteraciones = 0;
+        public string FormatoDecimal;
 
-        public MetodoIterativo(Matrix a, Matrix b, Matrix vectorInicial, int decimales, double cotaError) {
+        public List<ResultadoFila> Resultados = new List<ResultadoFila>();
+
+        public MetodoIterativo(Matrix a, Matrix b) {
             A = a;
+            N = a.ColumnCount;
             B = b;
-            X = vectorInicial;
             XAnterior = Vacia();
+            GenerarDLU();
+        }
+
+        public void CargarDatos(Matrix vectorInicial, int decimales, double cotaError) {
+            XInicial = vectorInicial;
+            X = vectorInicial;
             Decimales = decimales;
             CotaError = cotaError;
-            GenerarDLU();
+            FormatoDecimal = "N" + Decimales;
             GenerarTC();
         }
     
@@ -49,7 +60,7 @@ namespace TP_Superior
             U = A.TrianguloSuperior().Negativa();
         }
 
-        public abstract void GenerarTC();
+        public virtual void GenerarTC() { }
         
         public void Resolver() {
             while (!Parar())
@@ -66,6 +77,8 @@ namespace TP_Superior
             XAnterior = X;
             X = T * XAnterior + C;
             Iteraciones++;
+            Matrix diferencia = X.Clone() - XAnterior.Clone();
+            Resultados.Add(new ResultadoFila(X, diferencia));
         }
 
     }

@@ -48,20 +48,39 @@
   <ItemGroup>
     <Compile Include="CSML\Complex.cs" />
     <Compile Include="ExtensionForm.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="CSML\Matrix.cs" />
     <Compile Include="GaussSeidel.cs" />
     <Compile Include="Jacobi.cs" />
     <Compile Include="Matriz.cs" />
+    <Compile Include="Views\MetodoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MetodoForm.Designer.cs">
+      <DependentUpon>MetodoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetodoIterativo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="ResultadoFila.cs" />
+    <Compile Include="Views\ResultadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ResultadoForm.Designer.cs">
+      <DependentUpon>ResultadoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SeleccionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SeleccionForm.Designer.cs">
+      <DependentUpon>SeleccionForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -73,6 +92,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\MetodoForm.resx">
+      <DependentUpon>MetodoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ResultadoForm.resx">
+      <DependentUpon>ResultadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SeleccionForm.resx">
+      <DependentUpon>SeleccionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,6 +113,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\gauss.jpg" />
+    <Content Include="Resources\jacobi.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
