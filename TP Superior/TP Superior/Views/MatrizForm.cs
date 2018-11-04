@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TP_Superior
 {
-    public partial class Form1 : Form
+    public partial class MatrizForm : Form
     {
-        public Form1() {
+        public MatrizForm() {
             InitializeComponent();
             matrizA.Inicializar();
             matrizB.Inicializar();

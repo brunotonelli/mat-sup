@@ -1,6 +1,6 @@
 ﻿namespace TP_Superior
 {
-    partial class Form1
+    partial class MatrizForm
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -164,7 +164,7 @@
             this.botonResolver.UseVisualStyleBackColor = true;
             this.botonResolver.Click += new System.EventHandler(this.botonResolver_Click);
             // 
-            // Form1
+            // MatrizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,8 +180,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.matrizA);
             this.Controls.Add(this.botonMas);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MatrizForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MatrizForm";
             ((System.ComponentModel.ISupportInitialize)(this.matrizA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizB)).EndInit();
             this.ResumeLayout(false);

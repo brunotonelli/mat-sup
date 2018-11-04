@@ -119,6 +119,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.matrizX);
             this.Name = "MetodoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MetodoForm";
             ((System.ComponentModel.ISupportInitialize)(this.matrizX)).EndInit();
             this.ResumeLayout(false);

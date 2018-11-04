@@ -12,7 +12,6 @@ C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\bin\Debug\TP Superior.exe
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\bin\Debug\TP Superior.exe
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\bin\Debug\TP Superior.pdb
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP Superior.csprojAssemblyReference.cache
-C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Form1.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Properties.Resources.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP Superior.csproj.GenerateResource.cache
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP Superior.csproj.CoreCompileInputs.cache
@@ -21,3 +20,5 @@ C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP Superior.pdb
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.ResultadoForm.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.MetodoForm.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.SeleccionForm.resources
+C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Views.Intro.resources
+C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.MatrizForm.resources

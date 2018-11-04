@@ -48,16 +48,22 @@
   <ItemGroup>
     <Compile Include="CSML\Complex.cs" />
     <Compile Include="ExtensionForm.cs" />
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Views\MatrizForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\MatrizForm.Designer.cs">
+      <DependentUpon>MatrizForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CSML\Matrix.cs" />
     <Compile Include="GaussSeidel.cs" />
     <Compile Include="Jacobi.cs" />
     <Compile Include="Matriz.cs" />
+    <Compile Include="Views\Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Intro.Designer.cs">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MetodoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,8 +86,8 @@
     <Compile Include="Views\SeleccionForm.Designer.cs">
       <DependentUpon>SeleccionForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Views\MatrizForm.resx">
+      <DependentUpon>MatrizForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,7 +97,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Intro.resx">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MetodoForm.resx">
       <DependentUpon>MetodoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +127,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\gauss.jpg" />
+    <None Include="Resources\intro.jpg" />
     <Content Include="Resources\jacobi.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
