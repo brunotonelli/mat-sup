@@ -22,3 +22,4 @@ C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Met
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.SeleccionForm.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Views.Intro.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.MatrizForm.resources
+C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Views.NormaDialog.resources

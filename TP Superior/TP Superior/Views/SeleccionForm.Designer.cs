@@ -57,20 +57,20 @@
             // labelJacobi
             // 
             this.labelJacobi.AutoSize = true;
-            this.labelJacobi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJacobi.Location = new System.Drawing.Point(70, 266);
+            this.labelJacobi.Font = new System.Drawing.Font("Bahnschrift", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJacobi.Location = new System.Drawing.Point(50, 257);
             this.labelJacobi.Name = "labelJacobi";
-            this.labelJacobi.Size = new System.Drawing.Size(93, 31);
+            this.labelJacobi.Size = new System.Drawing.Size(130, 46);
             this.labelJacobi.TabIndex = 10;
             this.labelJacobi.Text = "Jacobi";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(237, 266);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(213, 259);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 31);
+            this.label1.Size = new System.Drawing.Size(230, 42);
             this.label1.TabIndex = 11;
             this.label1.Text = "Gauss-Seidel";
             // 
@@ -83,9 +83,11 @@
             this.Controls.Add(this.labelJacobi);
             this.Controls.Add(this.botonJacobi);
             this.Controls.Add(this.botonGauss);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SeleccionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SeleccionForm";
+            this.Text = "[ SIEL] - Selección del método";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -26,6 +26,7 @@
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MatrizForm));
             this.botonMas = new System.Windows.Forms.Button();
             this.matrizA = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.matrizA.Location = new System.Drawing.Point(12, 48);
             this.matrizA.Name = "matrizA";
             this.matrizA.RowHeadersVisible = false;
+            this.matrizA.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.matrizA.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.matrizA.Size = new System.Drawing.Size(333, 333);
             this.matrizA.TabIndex = 1;
@@ -99,6 +101,7 @@
             this.matrizB.Location = new System.Drawing.Point(351, 48);
             this.matrizB.Name = "matrizB";
             this.matrizB.RowHeadersVisible = false;
+            this.matrizB.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.matrizB.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.matrizB.Size = new System.Drawing.Size(33, 333);
             this.matrizB.TabIndex = 1;
@@ -180,9 +183,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.matrizA);
             this.Controls.Add(this.botonMas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MatrizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MatrizForm";
+            this.Text = "[ SIEL ] - Ingreso del sistema";
             ((System.ComponentModel.ISupportInitialize)(this.matrizA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizB)).EndInit();
             this.ResumeLayout(false);

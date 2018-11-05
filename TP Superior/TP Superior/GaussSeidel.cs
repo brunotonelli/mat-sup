@@ -10,7 +10,9 @@ namespace TP_Superior
     public class GaussSeidel : MetodoIterativo
     {
         public GaussSeidel(Matrix a, Matrix b) 
-            : base(a, b) { }
+            : base(a, b) {
+            GenerarTC();
+        }
         
         public override void GenerarTC() {
             T = (D.Clone() - L.Clone()).Inverse() * U;

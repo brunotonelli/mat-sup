@@ -10,18 +10,14 @@ namespace TP_Superior
     public class ResultadoFila
     {
         public double[] Variables;
-        public double Norma1;
-        public double Norma2;
-        public double NormaInfinito;
+        public double Norma;
 
         private int N;
 
-        public ResultadoFila(Matrix x, Matrix diferencia) {
+        public ResultadoFila(Matrix x, Matrix diferencia, double p) {
             N = x.RowCount;
             Variables = new double[N];
-            Norma1 = diferencia.PNorm(1);
-            Norma2 = diferencia.Norm();
-            NormaInfinito = diferencia.MaxNorm();
+            Norma = diferencia.PNorm(p);
             CargarVariables(x);
         }
 

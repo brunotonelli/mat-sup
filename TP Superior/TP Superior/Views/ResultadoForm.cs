@@ -23,10 +23,10 @@ namespace TP_Superior
         }
 
         private void InicializarGrid() {
-            dataGridView1.Size = this.Size;
-            dataGridView1.ColumnCount = Sistema.N + 5;
+            dataGridView1.ColumnCount = Sistema.N + 3;
             dataGridView1.Rows.Add(Sistema.Iteraciones + 1);
             dataGridView1.Columns[0].HeaderText = "i";
+            dataGridView1.Columns[0].Width = 30;
             dataGridView1.Columns[0].DividerWidth = 5;
             int i;
             for (i = 1; i <= Sistema.N; i++)
@@ -37,9 +37,9 @@ namespace TP_Superior
             }
 
             dataGridView1.Columns[i-1].DividerWidth = 5;
-            dataGridView1.Columns[i++].HeaderText = "Norma 1";
-            dataGridView1.Columns[i++].HeaderText = "Norma 2";
-            dataGridView1.Columns[i++].HeaderText = "Norma \u221E";
+            string norma = Sistema.CriterioParo == Double.PositiveInfinity ?
+                "Norma \u221E" : "Norma " + Sistema.CriterioParo.ToString();
+            dataGridView1.Columns[i++].HeaderText = norma;
             dataGridView1.Columns[i].HeaderText = "\u03B5";
         }
 
@@ -58,9 +58,7 @@ namespace TP_Superior
                 row.Cells[0].Value = it.ToString();
                 for (i = 1; i <= Sistema.N; i++)
                     row.Cells[i].Value = f.Variables[i - 1];
-                row.Cells[i++].Value = f.Norma1;
-                row.Cells[i++].Value = f.Norma2;
-                row.Cells[i++].Value = f.NormaInfinito;
+                row.Cells[i++].Value = f.Norma;
                 row.Cells[i].Value = "> " + Sistema.CotaError;
                 it++;
             }

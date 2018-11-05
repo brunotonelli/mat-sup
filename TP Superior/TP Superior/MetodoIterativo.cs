@@ -16,8 +16,8 @@ namespace TP_Superior
         protected Matrix L;
         protected Matrix U;
 
-        protected Matrix T;
-        protected Matrix C;
+        public Matrix T;
+        public Matrix C;
 
         public Matrix XInicial;
         public Matrix XAnterior;
@@ -28,6 +28,7 @@ namespace TP_Superior
         public double CotaError;
         public int Iteraciones = 0;
         public string FormatoDecimal;
+        public double CriterioParo;
 
         public List<ResultadoFila> Resultados = new List<ResultadoFila>();
 
@@ -45,7 +46,6 @@ namespace TP_Superior
             Decimales = decimales;
             CotaError = cotaError;
             FormatoDecimal = "N" + Decimales;
-            GenerarTC();
         }
     
         private Matrix Vacia() {
@@ -69,7 +69,7 @@ namespace TP_Superior
 
         private bool Parar() {
             Matrix aux = X.Clone() - XAnterior.Clone();
-            double norma = aux.MaxNorm(); //norma inf
+            double norma = aux.PNorm(CriterioParo);
             return norma < CotaError && norma != 0;
         }
 
@@ -78,7 +78,7 @@ namespace TP_Superior
             X = T * XAnterior + C;
             Iteraciones++;
             Matrix diferencia = X.Clone() - XAnterior.Clone();
-            Resultados.Add(new ResultadoFila(X, diferencia));
+            Resultados.Add(new ResultadoFila(X, diferencia, CriterioParo));
         }
 
     }

@@ -10,7 +10,9 @@ namespace TP_Superior
     public class Jacobi : MetodoIterativo {
 
         public Jacobi(Matrix a, Matrix b) 
-            : base(a, b) { }
+            : base(a, b) {
+            GenerarTC();
+        }
         
         public override void GenerarTC() {
             T = D.Inverse() * (L.Clone() + U.Clone());

@@ -45,6 +45,21 @@ namespace TP_Superior
             }
         }
 
+        public static void CargarGrid(this DataGridView d, Matrix m, int tamanioCelda) {
+            d.ColumnCount = m.ColumnCount;
+            d.RowCount = m.RowCount;
+            for (int i = 0; i < m.RowCount; i++)
+            {
+                for (int j = 0; j < m.ColumnCount; j++)
+                {
+                    var row = d.Rows[i];
+                    row.Cells[j].Value = m[i+1, j+1].Re;
+                    row.Height = tamanioCelda;
+                    d.Columns[j].Width = tamanioCelda;
+                }
+            }                   
+        }
+
         private static double[,] Matriz(DataGridView d) {
             int n = d.ColumnCount;
             double[,] matriz = new double[n, n];
