@@ -198,6 +198,7 @@
             // 
             // comboBoxCriterio
             // 
+            this.comboBoxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCriterio.FormattingEnabled = true;
             this.comboBoxCriterio.Location = new System.Drawing.Point(428, 298);
             this.comboBoxCriterio.Name = "comboBoxCriterio";

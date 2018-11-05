@@ -55,6 +55,16 @@ namespace TP_Superior
         public static bool Invertible(this Matrix m) {
             return m.Determinant() != 0;
         }
+
+        public static double Norma2(this Matrix m) {
+            Matrix a = m * m.Transpose();
+            double aut = 0;
+            Matrix autovalores = a.Eigenvalues();
+            for (int i = 0; i < autovalores.RowCount; i++)
+                if (autovalores[i + 1, 1].Re > aut)
+                    aut = autovalores[i + 1, 1].Re;
+            return Math.Sqrt(aut);
+        }
         
     }
 }

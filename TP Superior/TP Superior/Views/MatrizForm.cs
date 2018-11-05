@@ -78,5 +78,24 @@ namespace TP_Superior
             SeleccionForm f = new SeleccionForm(a, b);
             f.Show();
         }
+
+        private void botonNorma1_Click(object sender, EventArgs e) {
+            MostrarNorma(1);
+        }
+
+        private void botonNorma2_Click(object sender, EventArgs e) {
+            MostrarNorma(2);
+        }
+
+        private void botonNormaInf_Click(object sender, EventArgs e) {
+            MostrarNorma(Double.PositiveInfinity);
+        }
+
+        private void MostrarNorma(double p) {
+            Matrix a = matrizA.Transformar(ExtensionForm.TipoMatriz.Cuadrada);
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            var norma = p == 2 ? a.Norma2() : a.PNorm(p);
+            MessageBox.Show("Norma 1 de la matriz A: " + norma.ToString(), "Norma de A", buttons);
+        }
     }
 }

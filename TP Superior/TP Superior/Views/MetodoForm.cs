@@ -60,6 +60,7 @@ namespace TP_Superior
             comboBoxCriterio.Items.Add(new ComboBoxItem("Norma 2", 2));
             comboBoxCriterio.Items.Add(new ComboBoxItem("Norma Infinito", Double.PositiveInfinity));
             comboBoxCriterio.Items.Add(new ComboBoxItem("Otra", 0));
+            comboBoxCriterio.SelectedItem = comboBoxCriterio.Items[0];
         }
 
         private void CargarCriterio() {

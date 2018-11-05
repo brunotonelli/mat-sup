@@ -34,9 +34,9 @@
             this.matrizB = new System.Windows.Forms.DataGridView();
             this.botonMenos = new System.Windows.Forms.Button();
             this.botonValidar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.botonNorma1 = new System.Windows.Forms.Button();
+            this.botonNorma2 = new System.Windows.Forms.Button();
+            this.botonNormaInf = new System.Windows.Forms.Button();
             this.botonResolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.matrizA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizB)).BeginInit();
@@ -127,43 +127,47 @@
             this.botonValidar.UseVisualStyleBackColor = true;
             this.botonValidar.Click += new System.EventHandler(this.botonValidar_Click);
             // 
-            // button1
+            // botonNorma1
             // 
-            this.button1.Location = new System.Drawing.Point(390, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 35);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Norma 1";
-            this.button1.UseMnemonic = false;
-            this.button1.UseVisualStyleBackColor = true;
+            this.botonNorma1.Location = new System.Drawing.Point(390, 95);
+            this.botonNorma1.Name = "botonNorma1";
+            this.botonNorma1.Size = new System.Drawing.Size(115, 35);
+            this.botonNorma1.TabIndex = 19;
+            this.botonNorma1.Text = "Norma 1";
+            this.botonNorma1.UseMnemonic = false;
+            this.botonNorma1.UseVisualStyleBackColor = true;
+            this.botonNorma1.Click += new System.EventHandler(this.botonNorma1_Click);
             // 
-            // button2
+            // botonNorma2
             // 
-            this.button2.Location = new System.Drawing.Point(390, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 35);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Norma 2";
-            this.button2.UseMnemonic = false;
-            this.button2.UseVisualStyleBackColor = true;
+            this.botonNorma2.Location = new System.Drawing.Point(390, 136);
+            this.botonNorma2.Name = "botonNorma2";
+            this.botonNorma2.Size = new System.Drawing.Size(115, 35);
+            this.botonNorma2.TabIndex = 20;
+            this.botonNorma2.Text = "Norma 2";
+            this.botonNorma2.UseMnemonic = false;
+            this.botonNorma2.UseVisualStyleBackColor = true;
+            this.botonNorma2.Click += new System.EventHandler(this.botonNorma2_Click);
             // 
-            // button5
+            // botonNormaInf
             // 
-            this.button5.Location = new System.Drawing.Point(390, 177);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 35);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Norma  ∞";
-            this.button5.UseMnemonic = false;
-            this.button5.UseVisualStyleBackColor = true;
+            this.botonNormaInf.Location = new System.Drawing.Point(390, 177);
+            this.botonNormaInf.Name = "botonNormaInf";
+            this.botonNormaInf.Size = new System.Drawing.Size(115, 35);
+            this.botonNormaInf.TabIndex = 21;
+            this.botonNormaInf.Text = "Norma  ∞";
+            this.botonNormaInf.UseMnemonic = false;
+            this.botonNormaInf.UseVisualStyleBackColor = true;
+            this.botonNormaInf.Click += new System.EventHandler(this.botonNormaInf_Click);
             // 
             // botonResolver
             // 
-            this.botonResolver.Location = new System.Drawing.Point(412, 277);
+            this.botonResolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonResolver.Location = new System.Drawing.Point(390, 218);
             this.botonResolver.Name = "botonResolver";
-            this.botonResolver.Size = new System.Drawing.Size(75, 68);
+            this.botonResolver.Size = new System.Drawing.Size(110, 163);
             this.botonResolver.TabIndex = 22;
-            this.botonResolver.Text = "Resolver sistema";
+            this.botonResolver.Text = "Resolver Sistema";
             this.botonResolver.UseVisualStyleBackColor = true;
             this.botonResolver.Click += new System.EventHandler(this.botonResolver_Click);
             // 
@@ -173,9 +177,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 395);
             this.Controls.Add(this.botonResolver);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botonNormaInf);
+            this.Controls.Add(this.botonNorma2);
+            this.Controls.Add(this.botonNorma1);
             this.Controls.Add(this.botonValidar);
             this.Controls.Add(this.botonMenos);
             this.Controls.Add(this.matrizB);
@@ -203,9 +207,9 @@
         private System.Windows.Forms.DataGridView matrizB;
         private System.Windows.Forms.Button botonMenos;
         private System.Windows.Forms.Button botonValidar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button botonNorma1;
+        private System.Windows.Forms.Button botonNorma2;
+        private System.Windows.Forms.Button botonNormaInf;
         private System.Windows.Forms.Button botonResolver;
     }
 }
