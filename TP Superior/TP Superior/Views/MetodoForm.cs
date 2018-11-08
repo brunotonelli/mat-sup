@@ -21,15 +21,18 @@ namespace TP_Superior
         }
         
         private MetodoIterativo Sistema;
+        private Form SeleccionForm;
 
-        public MetodoForm(MetodoIterativo sistema, TipoMetodo tipo) {
+        public MetodoForm(MetodoIterativo sistema, TipoMetodo tipo, Form seleccionForm) {
             InitializeComponent();
+            SeleccionForm = seleccionForm;
             Sistema = sistema;
             matrizX.Inicializar();
             InicializarVector();
-            CargarMatrices();
             CargarComboBox();
-            labelMetodo.Text = tipo == TipoMetodo.Jacobi ? "Jacobi" : "Gauss-Seidel";
+            string titulo = tipo == TipoMetodo.Jacobi ? "Jacobi" : "Gauss-Seidel";
+            labelMetodo.Text = titulo;
+            this.Text = "[ SIEL ] - "+titulo;
         }
 
         private void botonResolver_Click(object sender, EventArgs e) {
@@ -40,7 +43,8 @@ namespace TP_Superior
             Sistema.CargarDatos(x, decimales, cotaError);
             CargarCriterio();
             Sistema.Resolver();
-            ResultadoForm f = new ResultadoForm(Sistema);
+            ResultadoForm f = new ResultadoForm(Sistema, this);
+            this.Hide();
             f.Show();
         }
 
@@ -50,10 +54,6 @@ namespace TP_Superior
                 matrizX.Columns[i].Width = 30;
         }
 
-        private void CargarMatrices() {
-            matrizT.CargarGrid(Sistema.T, 30);
-            matrizC.CargarGrid(Sistema.C, 30);
-        }
 
         private void CargarComboBox() {
             comboBoxCriterio.Items.Add(new ComboBoxItem("Norma 1", 1));
@@ -78,6 +78,23 @@ namespace TP_Superior
             double norma = (comboBoxCriterio.SelectedItem as ComboBoxItem).Value;
             if (norma == 0)
                 new NormaDialog(this).ShowDialog() ;
+        }
+
+        private void botonCambiar_Click(object sender, EventArgs e) {
+            this.Close();
+            SeleccionForm.Show();
+        }
+
+        private void botonTC_Click(object sender, EventArgs e) {
+            new MatricesTCForm(Sistema.T, Sistema.C).Show();
+        }
+
+        private void botonDLU_Click(object sender, EventArgs e) {
+            new MatricesDLUForm(Sistema.D, Sistema.L, Sistema.U).Show();
+        }
+
+        private void MetodoForm_FormClosed(object sender, FormClosedEventArgs e) {
+            SeleccionForm.Show();
         }
     }
 

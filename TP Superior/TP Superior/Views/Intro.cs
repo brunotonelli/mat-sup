@@ -36,5 +36,9 @@ namespace TP_Superior.Views
             this.Hide();
             new MatrizForm().Show();
         }
+
+        private void botonSalir_Click(object sender, EventArgs e) {
+            Environment.Exit(0);
+        }
     }
 }

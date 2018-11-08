@@ -27,67 +27,90 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultadoForm));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grid = new System.Windows.Forms.DataGridView();
+            this.botonFinalizar = new System.Windows.Forms.Button();
+            this.botonCambiar = new System.Windows.Forms.Button();
+            this.botonVolver = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // grid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 352);
-            this.dataGridView1.TabIndex = 2;
+            this.grid.AllowUserToAddRows = false;
+            this.grid.AllowUserToDeleteRows = false;
+            this.grid.AllowUserToResizeColumns = false;
+            this.grid.AllowUserToResizeRows = false;
+            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.grid.Location = new System.Drawing.Point(9, 9);
+            this.grid.Margin = new System.Windows.Forms.Padding(0);
+            this.grid.Name = "grid";
+            this.grid.ReadOnly = true;
+            this.grid.RowHeadersVisible = false;
+            this.grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grid.Size = new System.Drawing.Size(266, 351);
+            this.grid.TabIndex = 2;
             // 
-            // button1
+            // botonFinalizar
             // 
-            this.button1.Location = new System.Drawing.Point(676, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Finalizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botonFinalizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonFinalizar.Location = new System.Drawing.Point(206, 370);
+            this.botonFinalizar.Name = "botonFinalizar";
+            this.botonFinalizar.Size = new System.Drawing.Size(69, 23);
+            this.botonFinalizar.TabIndex = 3;
+            this.botonFinalizar.Text = "Finalizar";
+            this.botonFinalizar.UseVisualStyleBackColor = true;
+            this.botonFinalizar.Click += new System.EventHandler(this.botonFinalizar_Click);
             // 
-            // button2
+            // botonCambiar
             // 
-            this.button2.Location = new System.Drawing.Point(535, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Seleccionar otro método";
-            this.button2.UseVisualStyleBackColor = true;
+            this.botonCambiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonCambiar.Location = new System.Drawing.Point(64, 370);
+            this.botonCambiar.Name = "botonCambiar";
+            this.botonCambiar.Size = new System.Drawing.Size(136, 23);
+            this.botonCambiar.TabIndex = 4;
+            this.botonCambiar.Text = "Seleccionar otro método";
+            this.botonCambiar.UseVisualStyleBackColor = true;
+            this.botonCambiar.Click += new System.EventHandler(this.botonCambiar_Click);
+            // 
+            // botonVolver
+            // 
+            this.botonVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonVolver.Location = new System.Drawing.Point(9, 370);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(49, 23);
+            this.botonVolver.TabIndex = 5;
+            this.botonVolver.Text = "Volver";
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
             // ResultadoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(284, 399);
+            this.Controls.Add(this.grid);
+            this.Controls.Add(this.botonVolver);
+            this.Controls.Add(this.botonCambiar);
+            this.Controls.Add(this.botonFinalizar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "ResultadoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[ SIEL ] - Resultados";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ResultadoForm_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView grid;
+        private System.Windows.Forms.Button botonFinalizar;
+        private System.Windows.Forms.Button botonCambiar;
+        private System.Windows.Forms.Button botonVolver;
     }
 }

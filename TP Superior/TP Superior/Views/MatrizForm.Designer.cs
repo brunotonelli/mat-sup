@@ -69,6 +69,7 @@
             this.matrizA.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.matrizA.Size = new System.Drawing.Size(333, 333);
             this.matrizA.TabIndex = 1;
+            this.matrizA.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.matrizA_CellValueChanged);
             // 
             // label1
             // 
@@ -118,7 +119,7 @@
             // 
             // botonValidar
             // 
-            this.botonValidar.Location = new System.Drawing.Point(390, 48);
+            this.botonValidar.Location = new System.Drawing.Point(390, 263);
             this.botonValidar.Name = "botonValidar";
             this.botonValidar.Size = new System.Drawing.Size(115, 41);
             this.botonValidar.TabIndex = 18;
@@ -129,7 +130,7 @@
             // 
             // botonNorma1
             // 
-            this.botonNorma1.Location = new System.Drawing.Point(390, 95);
+            this.botonNorma1.Location = new System.Drawing.Point(390, 48);
             this.botonNorma1.Name = "botonNorma1";
             this.botonNorma1.Size = new System.Drawing.Size(115, 35);
             this.botonNorma1.TabIndex = 19;
@@ -140,7 +141,7 @@
             // 
             // botonNorma2
             // 
-            this.botonNorma2.Location = new System.Drawing.Point(390, 136);
+            this.botonNorma2.Location = new System.Drawing.Point(390, 89);
             this.botonNorma2.Name = "botonNorma2";
             this.botonNorma2.Size = new System.Drawing.Size(115, 35);
             this.botonNorma2.TabIndex = 20;
@@ -151,7 +152,7 @@
             // 
             // botonNormaInf
             // 
-            this.botonNormaInf.Location = new System.Drawing.Point(390, 177);
+            this.botonNormaInf.Location = new System.Drawing.Point(390, 130);
             this.botonNormaInf.Name = "botonNormaInf";
             this.botonNormaInf.Size = new System.Drawing.Size(115, 35);
             this.botonNormaInf.TabIndex = 21;
@@ -162,10 +163,11 @@
             // 
             // botonResolver
             // 
+            this.botonResolver.Enabled = false;
             this.botonResolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonResolver.Location = new System.Drawing.Point(390, 218);
+            this.botonResolver.Location = new System.Drawing.Point(390, 310);
             this.botonResolver.Name = "botonResolver";
-            this.botonResolver.Size = new System.Drawing.Size(110, 163);
+            this.botonResolver.Size = new System.Drawing.Size(115, 71);
             this.botonResolver.TabIndex = 22;
             this.botonResolver.Text = "Resolver Sistema";
             this.botonResolver.UseVisualStyleBackColor = true;
@@ -191,6 +193,7 @@
             this.Name = "MatrizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[ SIEL ] - Ingreso del sistema";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MatrizForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.matrizA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizB)).EndInit();
             this.ResumeLayout(false);

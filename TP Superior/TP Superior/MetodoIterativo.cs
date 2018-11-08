@@ -9,15 +9,15 @@ namespace TP_Superior
 {
     public class MetodoIterativo
     {
-        private Matrix A; //matriz de coeficientes
-        protected Matrix B; //matriz de terminos independientes
-
-        protected Matrix D;
-        protected Matrix L;
-        protected Matrix U;
+        public Matrix A; //matriz de coeficientes
+        public Matrix B; //matriz de terminos independientes
 
         public Matrix T;
         public Matrix C;
+
+        public Matrix D;
+        public Matrix L;
+        public Matrix U;
 
         public Matrix XInicial;
         public Matrix XAnterior;

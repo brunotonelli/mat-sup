@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_Superior.Views;
 
 namespace TP_Superior
 {
@@ -16,7 +17,10 @@ namespace TP_Superior
         public MatrizForm() {
             InitializeComponent();
             matrizA.Inicializar();
+            matrizA.AgregarCeldas(ExtensionForm.TipoMatriz.Cuadrada);
             matrizB.Inicializar();
+            matrizB.AgregarCeldas(ExtensionForm.TipoMatriz.Columna);
+            this.MaximizeBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -28,7 +32,7 @@ namespace TP_Superior
             }
             else
             {
-                string message = "No se permiten más de 10";
+                string message = "No se permite N > 10";
                 string caption = "Error";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 DialogResult result = MessageBox.Show(message, caption, buttons);
@@ -36,7 +40,7 @@ namespace TP_Superior
         }
 
         private void button5_Click(object sender, EventArgs e) {
-            if (matrizA.ColumnCount > 1)
+            if (matrizA.ColumnCount > 2)
             {
                 int i = matrizA.ColumnCount-- - 1;
                 matrizA.Rows.RemoveAt(i);
@@ -44,7 +48,7 @@ namespace TP_Superior
             }
             else
             {
-                string message = "La matriz debe tener al menos una celda";
+                string message = "La matriz debe tener N > 1";
                 string caption = "Error";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 DialogResult result = MessageBox.Show(message, caption, buttons);
@@ -62,11 +66,17 @@ namespace TP_Superior
             Matrix a = matrizA.Transformar(ExtensionForm.TipoMatriz.Cuadrada);
             string message = "";
             if (a.DiagonalmenteDominante())
+            {
                 message = "La matriz A es diagonalmente dominante para cualquier vector incial, " +
                             "por lo tanto ambos métodos convergen a la solución única A X = B";
+                botonResolver.Enabled = true;
+            }
             else
-                message = "La matriz A no es diagonalmente dominante, pero es posible que converja " +
-                    "el sistema de todas formas (Seleccionar un método para verificar)";
+            {
+                message = "La matriz A no es diagonalmente dominante, reordene las filas para que lo sea," +
+                 " o ingrese una matriz distinta";
+                botonResolver.Enabled = false;
+            }
 
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result = MessageBox.Show(message, "Convergencia del sistema", buttons);
@@ -75,7 +85,8 @@ namespace TP_Superior
         private void botonResolver_Click(object sender, EventArgs e) {
             Matrix a = matrizA.Transformar(ExtensionForm.TipoMatriz.Cuadrada);
             Matrix b = matrizB.Transformar(ExtensionForm.TipoMatriz.Columna);
-            SeleccionForm f = new SeleccionForm(a, b);
+            SeleccionForm f = new SeleccionForm(a, b, this);
+            this.Hide();
             f.Show();
         }
 
@@ -95,7 +106,15 @@ namespace TP_Superior
             Matrix a = matrizA.Transformar(ExtensionForm.TipoMatriz.Cuadrada);
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             var norma = p == 2 ? a.Norma2() : a.PNorm(p);
-            MessageBox.Show("Norma 1 de la matriz A: " + norma.ToString(), "Norma de A", buttons);
+            MessageBox.Show("Norma "+p+" de la matriz A: " + norma.ToString(), "Norma de A", buttons);
+        }
+
+        private void matrizA_CellValueChanged(object sender, DataGridViewCellEventArgs e) {
+            botonResolver.Enabled = false;
+        }
+
+        private void MatrizForm_FormClosed(object sender, FormClosedEventArgs e) {
+            new Intro().Show();
         }
     }
 }

@@ -48,6 +48,18 @@
   <ItemGroup>
     <Compile Include="CSML\Complex.cs" />
     <Compile Include="ExtensionForm.cs" />
+    <Compile Include="Views\MatricesDLUForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MatricesDLUForm.Designer.cs">
+      <DependentUpon>MatricesDLUForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatricesTCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MatricesTCForm.Designer.cs">
+      <DependentUpon>MatricesTCForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MatrizForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     <Compile Include="Views\SeleccionForm.Designer.cs">
       <DependentUpon>SeleccionForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\MatricesDLUForm.resx">
+      <DependentUpon>MatricesDLUForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MatricesTCForm.resx">
+      <DependentUpon>MatricesTCForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MatrizForm.resx">
       <DependentUpon>MatrizForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,11 +151,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\gauss.jpg" />
     <None Include="Resources\intro.jpg" />
-    <Content Include="Resources\jacobi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jacobi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gauss.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

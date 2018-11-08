@@ -23,3 +23,5 @@ C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Sel
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Views.Intro.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.MatrizForm.resources
 C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Views.NormaDialog.resources
+C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Views.MatricesDLUForm.resources
+C:\Users\BRUNO\Desktop\MAT SUP\TP Superior\TP Superior\obj\Debug\TP_Superior.Views.MatricesTCForm.resources

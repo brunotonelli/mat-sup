@@ -25,6 +25,8 @@ namespace TP_Superior
         
         public static bool DiagonalmenteDominante(this Matrix m) {
             int n = m.ColumnCount;
+            if (n <= 1)
+                return false;
             Matrix aux = m.Clone();
             for (int i = 0; i < n; i++)
             {
@@ -32,7 +34,7 @@ namespace TP_Superior
                 for (int j = 0; j < n; j++)
                     sumaFila += Math.Abs(aux[i+1, j+1].Re);
                 sumaFila -= Math.Abs(aux[i+1, i+1].Re);
-                if (Math.Abs(aux[i+1, i+1].Re) < sumaFila)
+                if (Math.Abs(aux[i+1, i+1].Re) <= sumaFila)
                     return false;
             }
             return true;
