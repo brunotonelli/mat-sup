@@ -20,5 +20,15 @@ namespace TP_Superior.Views
             this.MaximizeBox = false;
             this.MinimizeBox = false;
         }
+
+        private void matrizT_CellMouseEnter(object sender, DataGridViewCellEventArgs e) {
+            var cell = matrizT.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            cell.ToolTipText = cell.Value.ToString();
+        }
+
+        private void matrizC_CellMouseEnter(object sender, DataGridViewCellEventArgs e) {
+            var cell = matrizC.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            cell.ToolTipText = cell.Value.ToString();
+        }
     }
 }

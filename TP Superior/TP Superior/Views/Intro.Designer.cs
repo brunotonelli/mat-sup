@@ -42,6 +42,7 @@
             this.botonManual.TabIndex = 2;
             this.botonManual.Text = "Manual de Usuario";
             this.botonManual.UseVisualStyleBackColor = true;
+            this.botonManual.Click += new System.EventHandler(this.botonManual_Click);
             // 
             // botonCodigo
             // 

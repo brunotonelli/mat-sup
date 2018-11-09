@@ -40,5 +40,9 @@ namespace TP_Superior.Views
         private void botonSalir_Click(object sender, EventArgs e) {
             Environment.Exit(0);
         }
+
+        private void botonManual_Click(object sender, EventArgs e) {
+            MessageBox.Show("Aún no implementado");
+        }
     }
 }

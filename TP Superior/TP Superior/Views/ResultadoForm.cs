@@ -106,12 +106,16 @@ namespace TP_Superior
 
         private void botonFinalizar_Click(object sender, EventArgs e) {
             this.Close();
+            MetodoForm.Close();
             new Intro().Show();
         }
 
         private void ResultadoForm_FormClosed(object sender, FormClosedEventArgs e) {
             MetodoForm.Show();
         }
-        
+
+        private void ResultadoForm_SizeChanged(object sender, EventArgs e) {
+            grid.Width = this.Width - 36;
+        }
     }
 }

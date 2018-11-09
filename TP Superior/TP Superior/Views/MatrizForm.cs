@@ -64,19 +64,30 @@ namespace TP_Superior
 
         private void botonValidar_Click(object sender, EventArgs e) {
             Matrix a = matrizA.Transformar(ExtensionForm.TipoMatriz.Cuadrada);
+            Matrix b = matrizB.Transformar(ExtensionForm.TipoMatriz.Columna);
+            bool continuar = false;
             string message = "";
-            if (a.DiagonalmenteDominante())
-            {
-                message = "La matriz A es diagonalmente dominante para cualquier vector incial, " +
-                            "por lo tanto ambos métodos convergen a la solución única A X = B";
-                botonResolver.Enabled = true;
-            }
+            if (a.IsDiagonal())
+                message = "La matriz A no puede ser diagonal.";
+            else if (a.TieneCeros())
+                message = "La matriz A no puede tener coeficientes nulos para que un método indirecto funcione.";
+            else if (!a.DiagonalmenteDominante())
+                message = "La matriz A no es diagonalmente dominante, reordene las filas para que lo sea, o ingrese una matriz distinta";
             else
             {
-                message = "La matriz A no es diagonalmente dominante, reordene las filas para que lo sea," +
-                 " o ingrese una matriz distinta";
-                botonResolver.Enabled = false;
+                message = "La matriz A es diagonalmente dominante para cualquier vector incial.";
+                continuar = true;
             }
+            if (b.Nula())
+            {
+                message += "\n\nLa matriz B no puede ser nula.";
+                continuar = false;
+            }
+
+            if (continuar)
+                message += "\n\nEl sistema tiene solución.";
+
+            botonResolver.Enabled = continuar;
 
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result = MessageBox.Show(message, "Convergencia del sistema", buttons);

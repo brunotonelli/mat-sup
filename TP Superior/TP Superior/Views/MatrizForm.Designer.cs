@@ -119,7 +119,7 @@
             // 
             // botonValidar
             // 
-            this.botonValidar.Location = new System.Drawing.Point(390, 263);
+            this.botonValidar.Location = new System.Drawing.Point(390, 293);
             this.botonValidar.Name = "botonValidar";
             this.botonValidar.Size = new System.Drawing.Size(115, 41);
             this.botonValidar.TabIndex = 18;
@@ -164,12 +164,12 @@
             // botonResolver
             // 
             this.botonResolver.Enabled = false;
-            this.botonResolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonResolver.Location = new System.Drawing.Point(390, 310);
+            this.botonResolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonResolver.Location = new System.Drawing.Point(390, 340);
             this.botonResolver.Name = "botonResolver";
-            this.botonResolver.Size = new System.Drawing.Size(115, 71);
+            this.botonResolver.Size = new System.Drawing.Size(115, 41);
             this.botonResolver.TabIndex = 22;
-            this.botonResolver.Text = "Resolver Sistema";
+            this.botonResolver.Text = "RESOLVER";
             this.botonResolver.UseVisualStyleBackColor = true;
             this.botonResolver.Click += new System.EventHandler(this.botonResolver_Click);
             // 

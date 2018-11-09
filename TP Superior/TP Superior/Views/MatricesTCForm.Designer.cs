@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.matrizC = new System.Windows.Forms.DataGridView();
             this.matrizT = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.matrizC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizT)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +75,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.matrizC.DefaultCellStyle = dataGridViewCellStyle1;
             this.matrizC.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.matrizC.Enabled = false;
             this.matrizC.Location = new System.Drawing.Point(361, 12);
             this.matrizC.MultiSelect = false;
             this.matrizC.Name = "matrizC";
@@ -87,6 +87,7 @@
             this.matrizC.ShowEditingIcon = false;
             this.matrizC.Size = new System.Drawing.Size(33, 333);
             this.matrizC.TabIndex = 30;
+            this.matrizC.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.matrizC_CellMouseEnter);
             // 
             // matrizT
             // 
@@ -106,7 +107,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.matrizT.DefaultCellStyle = dataGridViewCellStyle2;
             this.matrizT.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.matrizT.Enabled = false;
             this.matrizT.Location = new System.Drawing.Point(12, 12);
             this.matrizT.MultiSelect = false;
             this.matrizT.Name = "matrizT";
@@ -119,12 +119,25 @@
             this.matrizT.ShowEditingIcon = false;
             this.matrizT.Size = new System.Drawing.Size(333, 333);
             this.matrizT.TabIndex = 29;
+            this.matrizT.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.matrizT_CellMouseEnter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(65, 389);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(278, 26);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Si el valor no es visible, arrastre el cursor sobre la celda y \r\nun tooltip lo mo" +
+    "strará  completo.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MatricesTCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 376);
+            this.ClientSize = new System.Drawing.Size(403, 426);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.matrizC);
@@ -147,5 +160,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView matrizC;
         private System.Windows.Forms.DataGridView matrizT;
+        private System.Windows.Forms.Label label3;
     }
 }

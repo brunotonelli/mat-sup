@@ -50,12 +50,28 @@ namespace TP_Superior
             return aux - aux.ExtractLowerTrapeze();
         }
 
+        public static bool TieneCeros(this Matrix m) {
+            for (int i = 0; i < m.RowCount; i++)
+                for (int j = 0; j < m.ColumnCount; j++)
+                    if (m[i + 1, j + 1].Re == 0)
+                        return true;
+            return false;
+        }
+
         public static Matrix Negativa(this Matrix m) {
             return m * -1;
         }
 
         public static bool Invertible(this Matrix m) {
             return m.Determinant() != 0;
+        }
+
+        public static bool Nula(this Matrix m) {
+            for (int i = 0; i < m.RowCount; i++)
+                for (int j = 0; j < m.ColumnCount; j++)
+                    if (m[i + 1, j + 1].Re != 0)
+                        return false;
+            return true;
         }
 
         public static double Norma2(this Matrix m) {

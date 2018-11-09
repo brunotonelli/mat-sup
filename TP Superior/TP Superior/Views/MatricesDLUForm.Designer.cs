@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.matrizD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizU)).BeginInit();
@@ -48,7 +49,6 @@
             this.matrizD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.matrizD.ColumnHeadersVisible = false;
             this.matrizD.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.matrizD.Enabled = false;
             this.matrizD.Location = new System.Drawing.Point(12, 12);
             this.matrizD.MultiSelect = false;
             this.matrizD.Name = "matrizD";
@@ -61,6 +61,7 @@
             this.matrizD.ShowEditingIcon = false;
             this.matrizD.Size = new System.Drawing.Size(333, 333);
             this.matrizD.TabIndex = 30;
+            this.matrizD.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.matrizD_CellMouseEnter);
             // 
             // matrizL
             // 
@@ -72,7 +73,6 @@
             this.matrizL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.matrizL.ColumnHeadersVisible = false;
             this.matrizL.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.matrizL.Enabled = false;
             this.matrizL.Location = new System.Drawing.Point(362, 12);
             this.matrizL.MultiSelect = false;
             this.matrizL.Name = "matrizL";
@@ -85,6 +85,7 @@
             this.matrizL.ShowEditingIcon = false;
             this.matrizL.Size = new System.Drawing.Size(333, 333);
             this.matrizL.TabIndex = 31;
+            this.matrizL.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.matrizL_CellMouseEnter);
             // 
             // matrizU
             // 
@@ -96,7 +97,6 @@
             this.matrizU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.matrizU.ColumnHeadersVisible = false;
             this.matrizU.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.matrizU.Enabled = false;
             this.matrizU.Location = new System.Drawing.Point(712, 12);
             this.matrizU.MultiSelect = false;
             this.matrizU.Name = "matrizU";
@@ -109,6 +109,7 @@
             this.matrizU.ShowEditingIcon = false;
             this.matrizU.Size = new System.Drawing.Size(333, 333);
             this.matrizU.TabIndex = 32;
+            this.matrizU.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.matrizU_CellMouseEnter);
             // 
             // label1
             // 
@@ -140,11 +141,23 @@
             this.label3.TabIndex = 35;
             this.label3.Text = "U";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 392);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(427, 13);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Si el valor no es visible, arrastre el cursor sobre la celda y un tooltip lo most" +
+    "rará  completo.";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MatricesDLUForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 378);
+            this.ClientSize = new System.Drawing.Size(1056, 422);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -172,5 +185,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

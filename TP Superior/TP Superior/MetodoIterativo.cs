@@ -63,6 +63,7 @@ namespace TP_Superior
         public virtual void GenerarTC() { }
         
         public void Resolver() {
+            Resultados = new List<ResultadoFila>();
             while (!Parar())
                 Iterar();
         }

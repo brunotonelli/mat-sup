@@ -93,7 +93,6 @@
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.botonCambiar);
             this.Controls.Add(this.botonFinalizar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "ResultadoForm";
@@ -101,6 +100,7 @@
             this.Text = "[ SIEL ] - Resultados";
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ResultadoForm_FormClosed);
+            this.SizeChanged += new System.EventHandler(this.ResultadoForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
