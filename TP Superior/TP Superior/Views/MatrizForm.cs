@@ -67,11 +67,7 @@ namespace TP_Superior
             Matrix b = matrizB.Transformar(ExtensionForm.TipoMatriz.Columna);
             bool continuar = false;
             string message = "";
-            if (a.IsDiagonal())
-                message = "La matriz A no puede ser diagonal.";
-            else if (a.TieneCeros())
-                message = "La matriz A no puede tener coeficientes nulos para que un método indirecto funcione.";
-            else if (!a.DiagonalmenteDominante())
+            if (!a.DiagonalmenteDominante())
                 message = "La matriz A no es diagonalmente dominante, reordene las filas para que lo sea, o ingrese una matriz distinta";
             else
             {
@@ -80,7 +76,7 @@ namespace TP_Superior
             }
             if (b.Nula())
             {
-                message += "\n\nLa matriz B no puede ser nula.";
+                message += "\n\nLa matriz B no puede ser nula. Dará resultado vector nulo.";
                 continuar = false;
             }
 

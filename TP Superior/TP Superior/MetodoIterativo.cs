@@ -71,7 +71,7 @@ namespace TP_Superior
         private bool Parar() {
             Matrix aux = X.Clone() - XAnterior.Clone();
             double norma = aux.PNorm(CriterioParo);
-            return norma < CotaError && norma != 0;
+            return norma < CotaError && Iteraciones != 0;
         }
 
         public void Iterar() {
