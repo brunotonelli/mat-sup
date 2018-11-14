@@ -74,11 +74,6 @@ namespace TP_Superior
                 message = "La matriz A es diagonalmente dominante para cualquier vector incial.";
                 continuar = true;
             }
-            if (b.Nula())
-            {
-                message += "\n\nLa matriz B no puede ser nula. Dará resultado vector nulo.";
-                continuar = false;
-            }
 
             if (continuar)
                 message += "\n\nEl sistema tiene solución.";
