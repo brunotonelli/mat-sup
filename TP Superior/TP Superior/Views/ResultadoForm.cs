@@ -24,13 +24,14 @@ namespace TP_Superior
             InitializeComponent();
             InicializarGrid();
             CargarGrid();
-            this.MaximizeBox = false;
 
-            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid.Columns[0].Width = 50;
 
             grid.Width = grid.Columns.Cast<DataGridViewColumn>().Sum(x => x.Width);
 
             this.Width = grid.Width + 36;
+            grid.AllowUserToResizeColumns = true;
 
         }
 
@@ -57,13 +58,13 @@ namespace TP_Superior
                 "Norma \u221E" : "Norma " + Sistema.CriterioParo.ToString();
             var columnaNorma = grid.Columns[i++];
             columnaNorma.HeaderText = norma;
-            columnaNorma.Resizable = DataGridViewTriState.True;
              
             grid.Columns[i].HeaderText = "\u03B5"; //columna epsilon
             
         }
 
         private void CargarGrid() {
+
 
             var row = grid.Rows[0];
             row.Cells[0].Value = 0;
@@ -117,5 +118,6 @@ namespace TP_Superior
         private void ResultadoForm_SizeChanged(object sender, EventArgs e) {
             grid.Width = this.Width - 36;
         }
+        
     }
 }

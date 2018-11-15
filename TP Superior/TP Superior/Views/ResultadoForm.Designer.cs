@@ -40,6 +40,8 @@
             this.grid.AllowUserToDeleteRows = false;
             this.grid.AllowUserToResizeColumns = false;
             this.grid.AllowUserToResizeRows = false;
+            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grid.Location = new System.Drawing.Point(9, 9);
@@ -48,13 +50,13 @@
             this.grid.ReadOnly = true;
             this.grid.RowHeadersVisible = false;
             this.grid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.grid.Size = new System.Drawing.Size(266, 351);
+            this.grid.Size = new System.Drawing.Size(419, 351);
             this.grid.TabIndex = 2;
             // 
             // botonFinalizar
             // 
             this.botonFinalizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonFinalizar.Location = new System.Drawing.Point(206, 370);
+            this.botonFinalizar.Location = new System.Drawing.Point(359, 370);
             this.botonFinalizar.Name = "botonFinalizar";
             this.botonFinalizar.Size = new System.Drawing.Size(69, 23);
             this.botonFinalizar.TabIndex = 3;
@@ -65,7 +67,7 @@
             // botonCambiar
             // 
             this.botonCambiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonCambiar.Location = new System.Drawing.Point(64, 370);
+            this.botonCambiar.Location = new System.Drawing.Point(217, 370);
             this.botonCambiar.Name = "botonCambiar";
             this.botonCambiar.Size = new System.Drawing.Size(136, 23);
             this.botonCambiar.TabIndex = 4;
@@ -76,7 +78,7 @@
             // botonVolver
             // 
             this.botonVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonVolver.Location = new System.Drawing.Point(9, 370);
+            this.botonVolver.Location = new System.Drawing.Point(162, 370);
             this.botonVolver.Name = "botonVolver";
             this.botonVolver.Size = new System.Drawing.Size(49, 23);
             this.botonVolver.TabIndex = 5;
@@ -88,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 399);
+            this.ClientSize = new System.Drawing.Size(437, 399);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.botonCambiar);

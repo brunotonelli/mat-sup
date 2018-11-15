@@ -51,6 +51,31 @@
   <ItemGroup>
     <Compile Include="CSML\Complex.cs" />
     <Compile Include="ExtensionForm.cs" />
+    <Compile Include="Manual\Manual1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual\Manual1.Designer.cs">
+      <DependentUpon>Manual1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manual\Manual2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual\Manual2.Designer.cs">
+      <DependentUpon>Manual2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manual\Manual3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual\Manual3.Designer.cs">
+      <DependentUpon>Manual3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manual\Manual4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual\Manual4.Designer.cs">
+      <DependentUpon>Manual4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manual\Manuales.cs" />
     <Compile Include="Views\ManualForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +138,18 @@
     <Compile Include="Views\SeleccionForm.Designer.cs">
       <DependentUpon>SeleccionForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Manual\Manual1.resx">
+      <DependentUpon>Manual1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual\Manual2.resx">
+      <DependentUpon>Manual2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual\Manual3.resx">
+      <DependentUpon>Manual3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual\Manual4.resx">
+      <DependentUpon>Manual4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MatricesDLUForm.resx">
       <DependentUpon>MatricesDLUForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +208,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono.ico" />
+    <None Include="Resources\manual4.png" />
+    <None Include="Resources\manual3.png" />
+    <None Include="Resources\manual2.png" />
+    <None Include="Resources\manual1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

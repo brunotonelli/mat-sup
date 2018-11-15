@@ -30,7 +30,7 @@ namespace TP_Superior
         public string FormatoDecimal;
         public double CriterioParo;
 
-        public List<ResultadoFila> Resultados = new List<ResultadoFila>();
+        public List<ResultadoFila> Resultados;
 
         public MetodoIterativo(Matrix a, Matrix b) {
             A = a;
@@ -63,6 +63,7 @@ namespace TP_Superior
         public virtual void GenerarTC() { }
         
         public void Resolver() {
+            Iteraciones = 0;
             Resultados = new List<ResultadoFila>();
             while (!Parar())
                 Iterar();

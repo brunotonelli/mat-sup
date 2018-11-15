@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_Superior.Manual;
 
 namespace TP_Superior.Views
 {
@@ -42,7 +43,8 @@ namespace TP_Superior.Views
         }
 
         private void botonManual_Click(object sender, EventArgs e) {
-            MessageBox.Show("Aún no implementado");
+            Manuales.Instancia.Cargar(this);
+            this.Hide();
         }
     }
 }
