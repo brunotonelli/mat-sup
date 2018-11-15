@@ -196,7 +196,7 @@
             this.label8.Size = new System.Drawing.Size(283, 39);
             this.label8.TabIndex = 65;
             this.label8.Text = "En este paso se debe ingresar el vector inicial. En caso de\r\nno ingresar datos, o" +
-    " dejar celdas vacías, se interepreta \r\ncomo un 0. ";
+    " dejar celdas vacías, se interpreta \r\ncomo un 0. ";
             // 
             // label2
             // 

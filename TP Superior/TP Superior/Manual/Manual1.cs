@@ -23,5 +23,13 @@ namespace TP_Superior.Manual
         private void Manual1_FormClosing(object sender, FormClosingEventArgs e) {
             Manuales.Instancia.Volver();
         }
+
+        private void label8_Click(object sender, EventArgs e) {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e) {
+
+        }
     }
 }
