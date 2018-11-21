@@ -34,7 +34,7 @@ namespace TP_Superior
                 for (int j = 0; j < n; j++)
                     sumaFila += Math.Abs(aux[i+1, j+1].Re);
                 sumaFila -= Math.Abs(aux[i+1, i+1].Re);
-                if (Math.Abs(aux[i+1, i+1].Re) <= sumaFila)
+                if (Math.Abs(aux[i+1, i+1].Re) < sumaFila) //se cambio porq era estricto
                     return false;
             }
             return true;
